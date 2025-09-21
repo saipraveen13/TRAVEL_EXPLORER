@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tourist Explorer - Advanced Responsive</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="logo"><i class="fas fa-globe-americas"></i>Tourist Explorer</div>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#explore">Explore</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#popular">Popular</a></li>
+    <li><a href="#events">Events</a></li>
+  </ul>
+  <div class="hamburger">
+    <i class="fas fa-bars"></i>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section id="home" class="hero">
+  <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1350&q=80')"></div>
+  <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1505832018823-50331d70d237?auto=format&fit=crop&w=1350&q=80')"></div>
+  <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=1350&q=80')"></div>
+  <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1350&q=80')"></div>
+  <div class="hero-content">
+    <h1>🌍 Welcome to Tourist Explorer</h1>
+    <p>Discover the world's best attractions, hidden gems, and unforgettable experiences.</p>
+    <button class="cta-button">Start Exploring</button>
+  </div>
+  <div class="scroll-down">
+    <i class="fas fa-chevron-down"></i>
+  </div>
+</section>
+
+<!-- Explore -->
+<section id="explore" class="explore-section">
+  <h2 class="section-title">Explore Destinations</h2>
+  <div class="search-box">
+    <input type="text" class="search-input" placeholder="Search for a destination...">
+    <button class="search-button"><i class="fas fa-search"></i> Search</button>
+  </div>
+  <div class="loader" id="loader"></div>
+  <div class="results-section" id="results">
+    <div class="weather-card">
+      <h2>Current Weather in <span id="city-name"></span></h2>
+      <div class="weather-info">
+        <div class="weather-detail"><h3>Temperature</h3><p id="temperature"></p></div>
+        <div class="weather-detail"><h3>Condition</h3><p id="weather-condition"></p></div>
+        <div class="weather-detail"><h3>Humidity</h3><p id="humidity"></p></div>
+        <div class="weather-detail"><h3>Wind Speed</h3><p id="wind-speed"></p></div>
+      </div>
+    </div>
+    <h2>Beautiful Places in <span id="location-name"></span></h2>
+    <div class="image-grid" id="image-grid"></div>
+  </div>
+</section>
+
+<!-- Horizontal Gallery -->
+<section id="gallery">
+  <h2 class="section-title">Global Gallery</h2>
+  <div class="horizontal-gallery">
+    <div class="horizontal-scroll" id="horizontal-gallery">
+      <!-- Images added manually -->
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHRyYXZlbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Santorini, Greece">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHRyYXZlbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Machu Picchu, Peru">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHRyYXZlbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Istanbul, Turkey">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fHRyYXZlbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Bali, Indonesia">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1513326738677-b964603b136d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDV8fHRyYXZlbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Egypt Pyramids">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1505832018823-50331d70d237?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTB8fHRyYXZlbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Maldives">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1507699622108-4be3abd695ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTV8fHRyYXZlbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="London, UK">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1513584684374-8bab748fbf90?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjB8fHRyYXZlbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Rio de Janeiro, Brazil">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjV8fHRyYXZlbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Norwegian Fjords">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzB8fHRyYXZlbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Barcelona, Spain">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzV8fHRyYXZlbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Canadian Rockies">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Popular Destinations -->
+<section id="popular">
+  <h2 class="section-title">Popular in <span id="popular-location">the World</span></h2>
+  <div class="image-grid" id="popular-grid"></div>
+</section>
+
+<!-- Events -->
+<section id="events">
+  <h2 class="section-title">Events in <span id="events-location">the World</span></h2>
+  <div class="image-grid" id="events-grid"></div>
+</section>
+
+<footer>
+  <div class="social-links">
+    <a href="https://www.facebook.com/BeautifulDestinations"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://x.com/touristlink"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.instagram.com/travelanddestinations"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.pinterest.com/ideas/most-beautiful-places-in-the-world-travel-destinations/934471276750"><i class="fab fa-pinterest"></i></a>
+  </div>
+  <p>Made using HTML, CSS, JS.</p>
+  <p class="api-credit">Powered by Unsplash API & OpenWeatherMap API.</p>
+</footer>
+
+<div class="back-to-top">
+  <i class="fas fa-arrow-up"></i>
+</div>
+
+<div class="modal" id="image-modal">
+  <div class="modal-close">
+    <i class="fas fa-times"></i>
+  </div>
+  <img class="modal-content" id="modal-image" src="">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
